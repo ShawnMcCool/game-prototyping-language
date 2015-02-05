@@ -25,7 +25,7 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 
 # Control Structures 
 
-* for_all = map function
+* to_all = infix map function
 
 # Entity / Behaviors
 
@@ -55,7 +55,25 @@ add_health action(amountToAdd Number) {
 }
 
 
-for_all players add_health(1)
+add_health(1) to_all players
 
 if player's hp < 10 then ...
+```
+
+# Example Application
+
+```
+paddle_one actor = can_move(controller = input_device(1))
+paddle_two actor = can_move(controller = input_device(2))
+
+group paddles = poddle_one + paddle_two
+
+move_up action(speed Number) {
+  actor's y_position = actor's y_position - speed
+}
+
+can_move behavior {
+  speed Number = 5
+  if controller's up_is_pressed then move_up(speed) actor
+}
 ```
