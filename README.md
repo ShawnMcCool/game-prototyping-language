@@ -44,7 +44,7 @@ moves_randomly behavior {
 ```
 
 ```
-player actor = has_health(hp = 150) + moves_randomly
+player actor = has_health(hp = 150) and moves_randomly
 ```
 
 # Basic Control
@@ -64,13 +64,13 @@ if player's hp < 10 have ...
 
 ```
 # paddles
-paddle_one actor = position(x = 10,  y = 100) + is_controlled_by(controller = input_device(1))
-paddle_two actor = position(x = 190, y = 100) + is_controlled_by(controller = input_device(2))
+paddle_one actor = position(x = 10,  y = 100) and is_controlled_by(controller = input_device(1))
+paddle_two actor = position(x = 190, y = 100) and is_controlled_by(controller = input_device(2))
 
 group paddles = paddle_one + paddle_two
 
 # ball
-ball actor = position(x = 100, y = 100, angle = 97) + moves_linearly + bounces_off_paddles
+ball actor = position(x = 100, y = 100, angle = 97) and moves_linearly and bounces_off_paddles
 
 # behaviors
 
