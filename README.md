@@ -64,13 +64,13 @@ if player's hp < 10 then ...
 
 ```
 # paddles
-paddle_one actor = start_at(x = 10,  y = 100) + can_move(controller = input_device(1))
-paddle_two actor = start_at(x = 190, y = 100) + can_move(controller = input_device(2))
+paddle_one actor = position(x = 10,  y = 100) + is_controlled_by(controller = input_device(1))
+paddle_two actor = position(x = 190, y = 100) + is_controlled_by(controller = input_device(2))
 
 group paddles = paddle_one + paddle_two
 
 # ball
-ball actor = start_at(x = 100, y = 100) + moves_linearly + bounces_off_paddles
+ball actor = position(x = 100, y = 100, angle = 97) + moves_linearly + bounces_off_paddles
 
 # behaviors
 
@@ -81,14 +81,17 @@ start_at behavior {
 
 moves_linearly behavior { 
   speed Number = 9
-  angle Number = 97
   actor's position = actor's position's forward(speed)
 }
 
-can_move behavior {
+is_controlled_by behavior {
   speed Number = 10
   if controller's up_is_pressed have actor move_up(speed)
   if controller's down_is_pressed have actor move_down(speed)
+}
+
+bounces_off_paddles behavior {
+  if actor collides_with paddles have actor's position's angle flip_horizontally
 }
 
 # actions
