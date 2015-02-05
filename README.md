@@ -20,8 +20,8 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 # Structures
 
 * actor - entities
-* behaviors - components
-* action - functions
+* behavior - component
+* action - function
 
 # Control Structures 
 
