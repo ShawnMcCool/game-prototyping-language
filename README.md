@@ -67,7 +67,7 @@ if player's hp < 10 have ...
 paddle_one actor = position(x = 10,  y = 100) and is_controlled_by(controller = input_device(1))
 paddle_two actor = position(x = 190, y = 100) and is_controlled_by(controller = input_device(2))
 
-group paddles = paddle_one + paddle_two
+group paddles = paddle_one and paddle_two
 
 # ball
 ball actor = position(x = 100, y = 100, angle = 97) and moves_linearly and bounces_off_paddles
