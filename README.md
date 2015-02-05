@@ -6,12 +6,11 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 
 * 2D only
 * Entity<->Component language
-* Integrated and extensible collision detection
+* Integrated collision detection
 * Integrated spritemap support (jpg, png, bmp)
 * Integrated tilemap support (tmx)
 * Integrate audio support (mp3, wav)
 * Integrate input device support (mouse, keyboard, gamepad)
-* Basic ui / widget support
 
 **Willful Omissions**
 
