@@ -1,6 +1,6 @@
-# game-prototyping-language
+# Game Prototyping Language
 
-Prototyping is not about making a finished product. It's about trying an idea. The goal of the language is to assist in this goal while preventing the user from being exposed to Java.
+Prototyping is not about making a finished product. It's about trying an idea. The goal of the language is to assist in this goal while preventing the user from being exposed to Java or JavaScript.
 
 **Goals**
 
