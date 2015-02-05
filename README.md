@@ -63,10 +63,16 @@ if player's hp < 10 then ...
 # Example Application
 
 ```
-paddle_one actor = can_move(controller = input_device(1))
-paddle_two actor = can_move(controller = input_device(2))
+paddle_one actor = start_at(x = 10,  y = 100) + can_move(controller = input_device(1))
+paddle_two actor = start_at(x = 190, y = 100) + can_move(controller = input_device(2))
 
-group paddles = poddle_one + paddle_two
+group paddles = paddle_one + paddle_two
+
+ball actor = start_at(100, 100) + moves_linearly + bounces_off_paddles
+
+moves_linearly behavior {
+  
+}
 
 move_up action(speed Number) {
   actor's y_position = actor's y_position - speed
