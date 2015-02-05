@@ -81,7 +81,7 @@ start_at behavior {
 
 moves_linearly behavior { 
   speed Number = 9
-  actor's position = actor's position's forward(speed)
+  actor's position forward(speed)
 }
 
 is_controlled_by behavior {
@@ -97,10 +97,10 @@ bounces_off_paddles behavior {
 # actions
 
 move_up action(speed Number) {
-  actor's position's y = actor's position's y - speed
+  actor's position's y += speed
 }
 
 move_down action(speed Number) {
-  actor's position's y = actor's position's y + speed
+  actor's position's y += speed
 }
 ```
