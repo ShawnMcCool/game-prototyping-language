@@ -77,9 +77,10 @@ ball actor = position(x = 100, y = 100, angle = 97) and moves_linearly and bounc
 start_at behavior {
   my position x = x
   my position y = y
-  
-  # Just like in Behat, where Given/When/Then are the same
-  i do_stuff
+  // or
+  actor's position's y = y
+  // or
+  // other things?
 }
 
 moves_linearly behavior { 
