@@ -13,6 +13,10 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 * Integrate input device support (mouse, keyboard, gamepad)
 * Basic ui / widget support
 
+**Willful Omissions**
+
+* Scene management
+* UI
 
 # Entity / Components
 
