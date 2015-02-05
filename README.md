@@ -25,7 +25,7 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 
 # Control Structures 
 
-* for_each = map function
+* for_all = map function
 
 # Entity / Behaviors
 
@@ -55,7 +55,7 @@ add_health action(amount Number) {
 }
 
 
-for_each players add_health(1)
+for_all players add_health(1)
 
 if player's hp < 10 then ...
 ```
