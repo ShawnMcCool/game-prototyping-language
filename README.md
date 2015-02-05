@@ -57,7 +57,7 @@ add_health action(amountToAdd Number) {
 
 add_health(1) to_all players
 
-if player's hp < 10 then ...
+if player's hp < 10 have ...
 ```
 
 # Example Application
