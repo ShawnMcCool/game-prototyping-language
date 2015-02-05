@@ -19,9 +19,13 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 
 # Structures
 
-* entities
-* behaviors
-* transformations
+* entities - entities
+* behaviors - components
+* transformations - functions
+
+# Control Structures 
+
+* for_each = map function
 
 # Entity / Behaviors
 
