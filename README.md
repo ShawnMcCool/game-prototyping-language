@@ -50,8 +50,8 @@ player actor = has_health(hp = 150) + moves_randomly
 # Basic Control
 
 ```
-add_health action(amount Number) {
- entity(hp = hp + amount)
+add_health action(amountToAdd Number) {
+ actor's hp = hp + amountToAdd
 }
 
 
