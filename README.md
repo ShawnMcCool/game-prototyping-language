@@ -19,11 +19,11 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 Toying with syntax...
 
 ```
-component health {
+health component {
   hp Number = 100
 }
 
-component moves_randomly {
+moves_randomly component {
   speed Number = 10
   
   ...
@@ -31,13 +31,13 @@ component moves_randomly {
 ```
 
 ```
-entity player = health(hp = 150) + moves_randomly
+player ethihy = health(hp = 150) + moves_randomly
 ```
 
 # Basic Control
 
 ```
-transform add_health(amount Number) {
+add_health transformation(amount Number) {
  entity(hp = hp + amount)
 }
 
