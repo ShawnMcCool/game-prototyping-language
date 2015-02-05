@@ -19,9 +19,9 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 
 # Structures
 
-* entities - entities
+* actor - entities
 * behaviors - components
-* transformations - functions
+* action - functions
 
 # Control Structures 
 
@@ -44,13 +44,13 @@ moves_randomly behavior {
 ```
 
 ```
-player entity = has_health(hp = 150) + moves_randomly
+player actor = has_health(hp = 150) + moves_randomly
 ```
 
 # Basic Control
 
 ```
-add_health transformation(amount Number) {
+add_health action(amount Number) {
  entity(hp = hp + amount)
 }
 
