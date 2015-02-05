@@ -31,7 +31,7 @@ moves_randomly component {
 ```
 
 ```
-player ethihy = health(hp = 150) + moves_randomly
+player entity = health(hp = 150) + moves_randomly
 ```
 
 # Basic Control
