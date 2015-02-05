@@ -17,16 +17,22 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 * Scene management
 * UI
 
-# Entity / Components
+# Structures
+
+* entities
+* behaviors
+* transformations
+
+# Entity / Behaviors
 
 Toying with syntax...
 
 ```
-health component {
+has_health behavior {
   hp Number = 100
 }
 
-moves_randomly component {
+moves_randomly behavior {
   speed Number = 10
   
   ...
@@ -34,7 +40,7 @@ moves_randomly component {
 ```
 
 ```
-player entity = health(hp = 150) + moves_randomly
+player entity = has_health(hp = 150) + moves_randomly
 ```
 
 # Basic Control
@@ -47,4 +53,3 @@ add_health transformation(amount Number) {
 
 for_each players add_health(1)
 ```
-
