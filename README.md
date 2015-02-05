@@ -68,18 +68,19 @@ paddle_two actor = start_at(x = 190, y = 100) + can_move(controller = input_devi
 
 group paddles = paddle_one + paddle_two
 
-ball actor = start_at(100, 100) + moves_linearly + bounces_off_paddles
+ball actor = start_at(x = 100, y = 100) + moves_linearly + bounces_off_paddles
 
-moves_linearly behavior {
-  
+start_at behavior {
+  actor's x = x
+  actor's y = y
 }
 
 move_up action(speed Number) {
-  actor's y_position = actor's y_position - speed
+  actor's y = actor's y - speed
 }
 
 move_down action(speed Number) {
-  actor's y_position = actor's y_position + speed
+  actor's y = actor's y + speed
 }
 
 can_move behavior {
