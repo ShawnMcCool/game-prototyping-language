@@ -19,8 +19,8 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 
 # Structures
 
-* actor - entities
-* behavior - component
+* actor - entities which have behaviors
+* behavior - entity components
 * action - function
 
 # Control Structures 
@@ -56,4 +56,6 @@ add_health action(amount Number) {
 
 
 for_each players add_health(1)
+
+if player's hp < 10 then ...
 ```
