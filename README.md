@@ -13,20 +13,35 @@ Prototyping is not about making a finished product. It's about trying an idea. T
 * Integrate input device support (mouse, keyboard, gamepad)
 * Basic ui / widget support
 
+
 # Entity / Components
 
 Toying with syntax...
 
 ```
-entity Player {
-  name Text = "Shawn"
-  age Number = 33
+component health {
+  hp Number = 100
 }
 
-addTo Player Sprite("dog.png")
-Player.add(Sprite("dog.png"))
-attach Sprite("dog.png") to Player
-Player has Sprite("dog.png")
-Player.has(Sprite("dog.png"))
+component moves_randomly {
+  speed Number = 10
+  
+  ...
+}
+```
+
+```
+entity player = health(hp = 150) + moves_randomly
+```
+
+# Basic Control
+
+```
+transform add_health(amount Number) {
+ entity(hp = hp + amount)
+}
+
+
+for_each players add_health(1)
 ```
 
