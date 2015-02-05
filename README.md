@@ -72,8 +72,12 @@ move_up action(speed Number) {
   actor's y_position = actor's y_position - speed
 }
 
+move_down action(speed Number) {
+  actor's y_position = actor's y_position + speed
+}
+
 can_move behavior {
-  speed Number = 5
   if controller's up_is_pressed then move_up(speed) actor
+  if controller's down_is_pressed then move_down(speed) actor
 }
 ```
