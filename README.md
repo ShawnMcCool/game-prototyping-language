@@ -87,8 +87,8 @@ moves_linearly behavior {
 
 can_move behavior {
   speed Number = 10
-  if controller's up_is_pressed then make actor move_up(speed)
-  if controller's down_is_pressed then make actor move_down(speed)
+  if controller's up_is_pressed have actor move_up(speed)
+  if controller's down_is_pressed have actor move_down(speed)
 }
 
 # actions
